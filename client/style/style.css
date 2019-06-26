@@ -1,0 +1,50 @@
+.navbar {
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.dashboard-body {
+}
+
+li.application_list_item {
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-bar input {
+  margin-top: 10px;
+  width: 40%;
+  border-style: solid;
+}
+.vis-divs{
+  border: 1px;
+  border-color: #eee;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.application-preview-card {
+   margin: 10px;
+   padding: 5px;
+   align-items: center;
+}
+
+.application-preview-topbar {
+  display: inline-block;
+}
+
+.open-application-btn {
+  align-self: right;
+}
+
+.test {
+  display: inline-block;
+  position: : right;
+}
+
+ul {
+  display: table;
+  margin-top: 50px;
+
+}

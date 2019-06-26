@@ -1,0 +1,25 @@
+version: "3"
+services:
+  client:
+    build: ./client
+    volumes:
+      - ./client:/client:Z
+  server:
+    build: ./server
+    volumes:
+      - ./server:/server:Z
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - server
+      - client
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.5.3
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
